@@ -1,0 +1,14 @@
+{
+  "name": "HotEntryViewer",
+  "description": "HotEntryViewer ver 1.0 special thanks neo6120",
+  "author": "heimusu",
+  "homepage_url": "http://d.hatena.ne.jp/heimusu/",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "http://feeds.feedburner.com/"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
