@@ -5,6 +5,7 @@
   "homepage_url": "http://d.hatena.ne.jp/heimusu/",
   "version": "1.0",
   "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": [
     "http://feeds.feedburner.com/"
   ],

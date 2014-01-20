@@ -13,7 +13,7 @@ getHotEntry = function() {
 	link = $(this).find("link").text();
         title = $(this).find("title").text();
         //return $(".feeds").append("<p>" + title + "</p>");
-	return $(".feeds").append("<A href = " + link + ">" + title + "</A>");
+	return $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
       });
     }
   });
