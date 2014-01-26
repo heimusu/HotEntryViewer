@@ -8,10 +8,11 @@
 	<button>Reload</button>
 	    <ul class="feeds"></ul>
 		<script src="javascripts/popup.js" type="text/javascript"></script>
-	<script id="article-tmpl" type="text/x-jquery-tmpl">
+		<script id="article-tmpl" type="text/x-jquery-tmpl">
 			<li>
 			        <A href="${link}">${title}</A>
 			</li>
-	</script>
+			document.getElementByTagName("a").addEventListener("click",chrome.tabs.create({url:link}),false);
+		</script>
     </body>
 </html>

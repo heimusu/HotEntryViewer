@@ -1,5 +1,6 @@
 var getHotEntry;
 var getLog;
+var createTab;
 
 getHotEntry = function() {
   return $.ajax({
@@ -29,6 +30,12 @@ getLog = function(){
     });
 };
 
+createTab = function(){
+    return chrome.tab.create({url:link});
+};
+
+
+/*実行部*/
 getLog();
 
 $("button").on("click",function(){
