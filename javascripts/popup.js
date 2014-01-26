@@ -9,11 +9,11 @@ getHotEntry = function() {
     success: function(data) {
       return $(data).find("item").each(function() {
         var title;
-	var  link;
-	link = $(this).find("link").text();
+        var  link;
+        link = $(this).find("link").text();
         title = $(this).find("title").text();
         //return $(".feeds").append("<p>" + title + "</p>");
-	return $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
+        return $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
       });
     }
   });
@@ -21,17 +21,17 @@ getHotEntry = function() {
 
 
 getLog = function(){
-    return $.ajax({
-	url:"http://feeds.feedburner.com/hatena/b/hotentry",
-	dataType:"xml",
-	success:function(data){
-	    return console.log(data);
-	}
-    });
+  return $.ajax({
+    url:"http://feeds.feedburner.com/hatena/b/hotentry",
+    dataType:"xml",
+    success:function(data){
+      return console.log(data);
+    }
+  });
 };
 
 createTab = function(){
-    return chrome.tab.create({url:link});
+  return chrome.tab.create({url:link});
 };
 
 
@@ -39,7 +39,7 @@ createTab = function(){
 getLog();
 
 $("button").on("click",function(){
-    return getHotEntry();
+  return getHotEntry();
 });
 
 /*
