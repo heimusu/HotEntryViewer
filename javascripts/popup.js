@@ -13,7 +13,8 @@ getHotEntry = function() {
         link = $(this).find("link").text();
         title = $(this).find("title").text();
         //return $(".feeds").append("<p>" + title + "</p>");
-        return $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
+        $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
+        $("a:last").on("click", createTab);
       });
     }
   });
@@ -30,8 +31,10 @@ getLog = function(){
   });
 };
 
-createTab = function(){
-  return chrome.tab.create({url:link});
+createTab = function(event){
+  event.preventDefault();
+  var $target = $(event.target);
+  return chrome.tabs.create({url: $target.attr("href")});
 };
 
 
