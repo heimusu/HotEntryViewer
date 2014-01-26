@@ -1,6 +1,5 @@
 var getHotEntry;
 var getLog;
-var getHotEntry2;
 
 getHotEntry = function() {
   return $.ajax({
@@ -18,22 +17,6 @@ getHotEntry = function() {
     }
   });
 };
-
-
-getHotEntry2 = function(){
-    return $.ajax({
-	url: "http://feeds.feedburner.com/hatena/b/hotentry",
-	dataType: "xml",
-	success: function(data){
-	    return $(data).find("item").each(function() {
-		var  link;
-		link = $(this).find("link").text();
-		return $(".feeds").append("<p>" + link + "</p>");
-	    });
-	}
-    });
-};
-
 
 
 getLog = function(){
