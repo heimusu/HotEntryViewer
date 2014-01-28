@@ -40,6 +40,7 @@ createTab = function(event){
 
 /*実行部*/
 getLog();
+getHotEntry();
 
 $("button").on("click",function(){
   return getHotEntry();
