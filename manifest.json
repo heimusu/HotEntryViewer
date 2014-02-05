@@ -13,6 +13,7 @@
     "http://feeds.feedburner.com/","tabs"
   ],
   "browser_action": {
+    "default_icon": "icon48.png",
     "default_popup": "popup.html"
   }
 }
