@@ -3,17 +3,11 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css"/>
-    <script src="javascripts/jquery.js" type="text/javascript"></script>
-    <script src="javascripts/jquery.tmpl.js" type="text/javascript"></script>
   </head>
   <body>
-    <button>Reload</button>
-    <ul class="feeds"></ul>
+    <button id="reload-button">Reload</button>
+    <ul id="feeds"></ul>
+    <script src="javascripts/hotentryviewer.js" type="text/javascript"></script>
     <script src="javascripts/popup.js" type="text/javascript"></script>
-    <script id="article-tmpl" type="text/x-jquery-tmpl">
-      <li>
-        <a href="${link}">${title}</a>
-      </li>
-    </script>
   </body>
 </html>
