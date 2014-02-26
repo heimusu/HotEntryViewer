@@ -1,5 +1,3 @@
-var createTab;
-
 function getHotEntry() {
   return $.ajax({
     url: "http://feeds.feedburner.com/hatena/b/hotentry",
@@ -17,7 +15,6 @@ function getHotEntry() {
         });
 
         $("#article-tmpl").tmpl({link: link, title: title, hateb: hateb }).appendTo(".feeds");
-        $("a:last").on("click", createTab);
       });
     }
   });
@@ -34,10 +31,8 @@ function getLog(){
   });
 };
 
-function createTab (event){
-  event.preventDefault();
-  var $target = $(event.target);
-  return chrome.tabs.create({url: $target.attr("href")});
+function createTab (url){
+  return chrome.tabs.create({url: url});
 };
 
 
@@ -82,6 +77,14 @@ function addEvent(){
       "selector" : "button#hateb-sort-desc",
       "func" : function(){ sortByHatebDesc(); }
     },
+    // Open Tab
+    {
+      "selector" : "ul.feeds a",
+      "func" : function(){
+        var url = $(this).attr("href");
+        createTab(url);
+      }
+    }
   ];
 
   // Use deligate
