@@ -3,3 +3,36 @@ body{
     width:960px;
     margin:20px auto;
 }
+
+/* list design */
+ul.feeds {
+  width: 75%;
+}
+
+ul.feeds li {
+  margin-bottom: 7px;
+}
+
+ul.feeds p.count {
+  color: #00A5DE;
+  margin: 0px 14px 0px 0px;
+  width: 80px;
+  float: left;
+  text-align:right;
+  vertical-align: top;
+}
+ul.feeds p.count span.user {
+  font-size: 12px;
+}
+
+ul.feeds div.text {
+  vertical-align: top;
+  overflow: auto;
+}
+
+/* clearfix */
+ul.feeds li:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
