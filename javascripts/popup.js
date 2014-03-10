@@ -9,12 +9,13 @@ getHotEntry = function() {
     success: function(data) {
       return $(data).find("item").each(function() {
         var title;
-        var  link;
-        link = $(this).find("link").text();
+        var link;
+	link = $(this).find("link").text();
         title = $(this).find("title").text();
-        //return $(".feeds").append("<p>" + title + "</p>");
+	//return $(".feeds").append("<p>" + title + "</p>");
         $("#article-tmpl").tmpl({link: link, title: title}).appendTo(".feeds");
         $("a:last").on("click", createTab);
+	alert(count);
       });
     }
   });
