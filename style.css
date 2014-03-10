@@ -1,5 +1,12 @@
 body{
-    background:#DDFFFF;
+    background:#FFFFFF;
     width:960px;
     margin:20px auto;
+}
+#reload{
+    margin-left:380px;
+}
+
+#title{
+    margin-left:320px;
 }
