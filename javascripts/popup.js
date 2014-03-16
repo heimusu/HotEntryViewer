@@ -104,8 +104,14 @@ function addEvent(){
 
 /*Process*/
 function processCode(){
-    getLog();
-    getHotEntry();
+    //Debug Counter
+    var debugCount = 0;
+    if(debugCount == 1){
+	getLog();
+    }
+    else{
+	getHotEntry();
+    }
 
     addEvent();
 }
